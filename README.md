@@ -18,11 +18,14 @@ Please run following commands:
 `php artisan migrate`
 
 Available Endpoints:
+
+- Return a list of all entries
+
 ```angular2html
-GET /api/links - Return a list of all entries
+GET /api/links
 ```
 
-Create a new entry
+- Create a new entry
 
 ```angular2html
 POST /api/links
@@ -34,7 +37,7 @@ array(
 );
 ```
 
-Return a list of entries for a specified URL in an interval
+- Return a list of entries for a specified URL in an interval
 
 ```angular2html
 GET /api/links/by-url-in-interval
@@ -47,7 +50,7 @@ Param: JSON with structure
 }
 ```
 
-Return a list of entries for a specified type in an interval
+- Return a list of entries for a specified type in an interval
 
 ```angular2html
 GET /api/links/by-type-in-interval
