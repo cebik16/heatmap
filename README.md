@@ -20,25 +20,37 @@ Please run following commands:
 Available Endpoints:
 ```angular2html
 GET /api/links - Return a list of all entries
+```
 
-POST /api/links - Create a new entry
+Create a new entry
+
+```angular2html
+POST /api/links
 Param: 
 array(
     'url' =>  "Required, must be a valid URL.",
     'type' => "Required, must be one of the types: product, category, static-page, checkout, homepage",
     'customer_id' => 'Required, a random string'
 );
+```
 
-GET /api/links/by-url-in-interval - Return a list of entries for a specified URL in an interval
+Return a list of entries for a specified URL in an interval
+
+```angular2html
+GET /api/links/by-url-in-interval
 Param: JSON with structure 
 {
     'url': "Required, must be a valid URL.",
     'start_date': "Required, must be a valid, non-relative date according to the strtotime PHP function",
     'end_date': "Not required, must be a valid, non-relative date according to the strtotime PHP function. 
-                If is let empty it will be considered as the current moment",,
+                If is let empty it will be considered as the current moment"
 }
+```
 
-GET /api/links/by-type-in-interval - Return a list of entries for a specified type in an interval
+Return a list of entries for a specified type in an interval
+
+```angular2html
+GET /api/links/by-type-in-interval
 Param: JSON with structure 
 {
     'type': "Required, must be one of the types: product, category, static-page, checkout, homepage",
@@ -48,7 +60,7 @@ Param: JSON with structure
 }
 ```
 
-DataBase
+Database
 ```angular2html
 DB_CONNECTION=mysql
 DB_DATABASE=heatmap
